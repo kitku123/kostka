@@ -1,0 +1,33 @@
+body {
+	background-color: #2d85c5;
+    font-family: Trebuchet MS;
+    max-height: 500px;
+    overflow-y:hidden;
+}
+
+#diobrando{
+    text-align:center;
+    padding-top: 130px;
+}
+
+#dupa{
+   	color: #a5d3eb;
+   	font-size: 200px;
+   	margin-top: 0px;
+}
+
+button {
+  background-color: #a5d3eb;
+  color: #2d85c5;
+  font-size: 1.3em;
+  font-weight: 600;
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 55px;
+  width: 160px;
+}
