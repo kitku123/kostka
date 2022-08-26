@@ -1,0 +1,187 @@
+<head>
+	<meta charset="utf-8">
+	<title>no tytuł bo</title>
+	<link rel="Stylesheet" href="css.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriwether' rel='stylesheet'>
+</head>
+
+<body id = "lewo">
+
+	<center> <button onclick = "rzeczy()" id = "pycisk">tryb smutnych oczu</button></center>
+
+		<br>
+ 		<p id = "p1"><b>Imię i nazwisko:</b><br>Evelynn Kesselring<span id ="pp1">
+ 			<br>Eve pochodzi z dużego wampirzego rodu, którego przedstawicieli na tym świecie trudno
+ 			<br>już szukać. Z wiadomych więc powodów nie posługuje się swoim dawnym nazwiskiem.
+ 			<br>Pełnym imieniem też nie dzieli się często - w cyrku występuje pod pseudonimem "Eve",
+ 			<br>będącym tak właściwie zdrobnieniem prawdziwego imienia. W spisie ludności widnieje
+ 			<br>pod jako "Eve Monnaie".
+ 		</span><p/>
+ 		<p id = "p2"><b>Rasa:</b><br>wampir<span id ="pp2">
+ 			<br>Choć jest wampirem czystej krwi, swoją rasę jest zmuszony ukrywać, by w ten sposób
+ 			<br>nie ujawnić swojej prawdziwej tożsamości. Żyje jako człowiek. O tym, że w rzeczywistości
+ 			<br>człowiekiem nie jest, wie tylko kilka zaufanych mu osób.  
+ 		</span><p/>
+ 		<p id = "p3"><b>Zawód:</b><br>iluzjonista<span id ="pp3">
+ 			<br>Życie nauczyło go, jak udawać. Choć zaczynąjąc pracę w cyrku o sztuce iluzji 
+ 			<br>nie miał zbyt wielkiego pojęcia, po jakimś czasie udało mu się opanować ją całkiem dobrze.
+ 			<br>Podczas cyrkowych pokazów, ma swój własny pokaz magii. Często też zdarza mu się też asystować
+ 			<br>w pokazach innych cyrkowców.
+ 		</span><p/>
+ 		<p id = "p4"><b>Data urodzenia i wiek:</b><br>16 marca | 24 lata<span id ="pp4">
+ 			<br>Po świecie nie stąpa jeszcze zbyt długo, ale żyje dostatecznie długo, żeby pamiętać,
+ 			<br>co się stało z resztą jego rodziny. Uciec z domu był zmuszony w wieku lat 14.
+ 			<br>Trochę włóczył się po świecie, szukając swojego miejsca, jednak od kilku lat
+ 			<br>to cyrk jest jego domem.
+ 		</span><p/>
+ 		<p id = "p5"><b>Identyfikacja płciowa:</b><br>niebinarna<span id ="pp5">
+ 			<br>Nigdy nie czuł się jakoś nierozłącznie powiązany z męskością, ale nigdy też się jej nie brzydził.
+ 			<br>Wampir uważa, że płeć to jedynie koncept i lubi z nią eksperymentować Choć na co dzień nie ma żadnego
+ 			<br>problemu z byciem określanym jako mężczyzna, to często można go zobaczyć w makijażu, perukach
+ 			<br>czy sukienkach - w tym również podczas cyrkowych pokazów.
+ 		</span><p/>
+ 		<p id = "p6"><b>Orientacja seksualna i romantyczna:</b><br>biseksualny szaroromantyczny<span id ="pp6">
+ 			<br>Evelynn gustuje zarówno w kobietach, jak i mężczyznach, a tymi, którzy nie wpisują się w wymienione kategorie
+ 			<br>również nie gardzi. Uwielbia flirtować, przeżywać przelotne romanse i one night standy. Nie interesują go jednak
+ 			<br>szczególnie związki - jeśli chodzi o partnerów romantycznych jest dużo bardziej wybredny niż przy partnerach
+ 			<br>seksualnych.
+
+
+ 		</span><p/>
+
+</body>
+
+<style>
+
+body {
+  	font-family: 'Merriwether';
+  	font-size:18;
+  	background-color: #a61c00; 
+}
+
+body.kontrast{
+	background-color:#1A1A1A;
+	bbackground-color: #5b0f00;
+	color: white;
+}
+
+p {
+   text-align:center;
+   ptransition: 1s;
+}
+
+span{
+	color:#5b0f00;
+	text-align: justify;
+	text-align: justify;
+  	text-justify: inter-word;
+	width: 30%;
+}
+
+p[id = "tresc"]{
+   transition: 1s;
+   color:#a61c00;
+}
+
+span.brak {
+   transition: 1s;
+   font-size: 0;
+}
+
+span.jest {
+	transition: 1s;
+	font-size:18;
+}
+
+span.kontrast {
+   color:white;
+}
+
+
+
+
+
+
+button{
+	font-family: 'Merriwether';
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	height: 36px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #a61c00;
+	background-color: #5b0f00;
+	transition: color 0.5s;
+	padding: 0 18px;
+                    
+                
+}
+
+button:hover {
+    color: black;
+}
+
+
+
+</style>
+
+<script type="text/javascript">
+
+	var kolor = 0;
+
+	function dla(id){
+		kupa = document.getElementById("p"+id);
+		kupa.classList.add('brak');
+
+		element = document.getElementById(id);
+
+		element.onmouseover = function() {
+			kupa = document.getElementById("p"+id)
+			kupa.classList.add('jest');
+		}
+
+		element.onmouseleave = function() {
+			if (kolor == 0){
+				kupa = document.getElementById("p"+id)
+			kupa.classList.add('brak');
+			kupa.classList.remove('jest');
+			}
+	  		
+		}
+
+	}
+
+	for(var i = 1; i < 10; i++){
+		dla("p"+i)
+	}
+
+
+	function rzeczy(){
+		if (kolor == 0){
+
+			document.getElementById("pycisk").innerHTML ="powrót";
+
+			kolor = 1;
+			document.getElementById("lewo").classList.add("kontrast");
+			for(var i = 1; i < 10; i++){
+				document.getElementById("pp"+i).classList.add("kontrast");	
+				document.getElementById("pp"+i).classList.add("jest");
+			}		
+		} else {
+			document.getElementById("pycisk").innerHTML ="tryb smutnych oczu";
+			kolor = 0;
+			document.getElementById("lewo").classList.remove("kontrast");
+			for(var i = 1; i < 10; i++){
+				document.getElementById("pp"+i).classList.remove("kontrast");	
+				document.getElementById("pp"+i).classList.remove("jest");
+				document.getElementById("pp"+i).classList.add("brak");
+			}	
+		}
+	}
+
+
+
+</script>
